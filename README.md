@@ -5,7 +5,10 @@
 import asyncio
 loop = asyncio.get_event_loop()
 vk = vkbee.VkApi('token', loop)
-await vkbee.VkApi.call(vk,'status.set',{'status':'VKBee is fastest!','group_id':1})
+async def main(loop):
+  a=await vkbee.VkApi.call(vk,'status.set',{'status':'VKBee is fastest!','group_id':1})
+  print(a)
+asyncio.get_event_loop().run_until_complete(main(loop))
 ```
 ## Параметры
 
