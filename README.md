@@ -2,6 +2,9 @@
 ### Документация
 ## Вызов запросов к ВКидерасте
 ```python
+import asyncio
+loop = asyncio.get_event_loop()
+vk = vkbee.VkApi('token', loop)
 await vkbee.VkApi.call(vk,'status.set',{'status':'VKBee is fastest!','group_id':1})
 ```
 ## Параметры
@@ -12,7 +15,7 @@ await vkbee.VkApi.call(vk,'status.set',{'status':'VKBee is fastest!','group_id':
 | status.set | Метод ВКонтакте      |
 | {'status':'VKBee is fastest!','group_id':1} | Json объект параметров      |
 
-## Connectivity
+## Подключение аккаунта
 
 ```python
 import asyncio
@@ -41,4 +44,4 @@ print((a['execute_errors'][0])
 Далее берем что хотим =)
 
 ## BotsLongPoll
-# Oh wait plz!
+### Coming soon
