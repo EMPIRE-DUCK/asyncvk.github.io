@@ -4,7 +4,7 @@
 ```python
 import asyncio
 loop = asyncio.get_event_loop()
-vk = vkbee.VkApi('token', loop)
+vk = vkbee.VkApi('token', loop=loop)
 async def main(loop):
   a=await vkbee.VkApi.call(vk,'status.set',{'status':'VKBee is fastest!','group_id':1})
   print(a)
