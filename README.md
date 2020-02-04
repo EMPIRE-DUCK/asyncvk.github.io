@@ -30,7 +30,7 @@ vk = vkbee.VkApi('token', loop=loop)
 | Параметр | Описание |
 | -------- | ---------|
 | token | Ваш ключ доступа к аккаунту      |
-| loop | Ваш луп заданный  loop = asyncio.get_event_loop()     |
+| loop | Async Loop заданный  loop = asyncio.get_event_loop()     |
 
 ## Подсказка по парсингу ответа
 
