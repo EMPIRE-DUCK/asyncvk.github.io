@@ -10,6 +10,12 @@ async def main(loop):
   print(a)
 asyncio.get_event_loop().run_until_complete(main(loop))
 ```
+либо можно использовать синхронный вариант вызова
+
+```python
+vk.call()
+```
+
 ## Параметры
 
 | Параметр | Описание |
