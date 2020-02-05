@@ -46,5 +46,36 @@ print((a['execute_errors'][0])
 
 Далее берем что хотим =)
 
-## BotsLongPoll
-### Coming soon
+# BotsLongPoll
+## Подключение LongPoll для группы
+
+```python
+  vk = vkbee.VkApi('ваштокен', loop=loop)
+  vk_poll = vkbee.BotLongpoll(vk, "191502455", 10)
+```
+
+## Слушаем ивенты от ВКонтакте
+
+```python
+  async for event in vk_poll.events():
+    peer_id = event['object']['message']['peer_id']
+    text = event['object']['message']['text']
+```
+
+### Подсказочка
+   text и peer_id в примере сразу будут забиты,вам останеться только обработать их и ответить на них!
+
+## Ответ на ивент
+
+```python
+              if 'vkbee' in text.split():
+                dast = {
+                    'random_id': 0,
+                    'peer_id': peer_id,
+                    'message': 'Класс супер бомба!!!!!!'
+                }
+                await vkbee.VkApi.call(vk, 'messages.send', dast)
+```
+
+### Подсказочка 
+   random_id всегда нужен,иначе ВКонтакте не обработает ваш запрос!
