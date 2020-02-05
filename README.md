@@ -15,6 +15,7 @@ asyncio.get_event_loop().run_until_complete(main(loop))
 ```python
 vk.call()
 ```
+![Таблица](https://github.com/asyncvk/asyncvk.github.io/blob/master/KD8y1AGc3ds.jpg?raw=true)
 
 ## Параметры
 
