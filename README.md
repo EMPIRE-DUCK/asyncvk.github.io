@@ -92,7 +92,7 @@ print((a['execute_errors'][0])
 
 ```python
   vk = vkbee.VkApi('ваштокен', loop=loop)
-  vk_polluse = vkbee.BotLongpoll(vk,10)
+  vk_polluse = vkbee.UserLongpoll(vk,10)
 ```
 
 ## Слушаем ивенты от ВКонтакте
