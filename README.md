@@ -6,7 +6,7 @@ import asyncio
 loop = asyncio.get_event_loop()
 vk_s = vkbee.VkApi('token', loop=loop)
 async def main(loop):
-  vk = vk.get_api()
+  vk = vk_s.get_api()
   a = await vk.messages.send(
     chat_id=1,
     message='VKBEE TOP!',
@@ -36,8 +36,8 @@ vk.async_call()
 ```python
 import asyncio
 loop = asyncio.get_event_loop()
-vk = vkbee.VkApi('token', loop=loop)
-vk = vk.get_api()
+vk_s = vkbee.VkApi('token', loop=loop)
+vk = vk_s.get_api()
 ```
 ## Параметры
 
@@ -66,13 +66,13 @@ print((a['execute_errors'][0])
 ## Ответ на ивент
 
 ```python
-              if 'vkbee' in text.split():
+              if 'vkbee' in text:
                 dast = {
                     'random_id': 0,
                     'peer_id': peer_id,
                     'message': 'Класс супер бомба!!!!!!'
                 }
-                await vkbee.VkApi.call(vk, 'messages.send', dast)
+                await vk_s.call('messages.send', dast)
 ```
 
 ### Подсказочка 
