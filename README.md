@@ -2,6 +2,7 @@
 ### Документация
 ## Вызов запросов к ВКидерасте
 ```python
+import vkbee
 import asyncio
 loop = asyncio.get_event_loop()
 vk_s = vkbee.VkApi('token', loop=loop)
@@ -34,6 +35,7 @@ vk.async_call()
 ## Подключение аккаунта
 
 ```python
+import vkbee
 import asyncio
 loop = asyncio.get_event_loop()
 vk_s = vkbee.VkApi('token', loop=loop)
