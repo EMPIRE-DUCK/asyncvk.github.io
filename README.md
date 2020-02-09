@@ -65,6 +65,25 @@ print((a['execute_errors'][0])
 ### Подсказочка
    text и peer_id в примере сразу будут забиты,вам останеться только обработать их и ответить на них!
 
+# BotsLongPoll
+## Подключение LongPoll для группы
+
+```python
+  import vkbee
+  from vkbee.longpoll import VkBeeLongpoll
+  vk_s = vkbee.VkApi('ваштокен', loop=loop)
+  vk = vk_s.get_api()
+  longpoll = BotLongPoll(vk_s,"ид группы")
+```
+
+## Слушаем ивенты от ВКонтакте
+
+```python
+  async for event in longpoll.events():
+    peer_id = event['object']['message']['peer_id']
+    text = event['object']['message']['text]
+```
+
 ## Ответ на ивент
 
 ```python
