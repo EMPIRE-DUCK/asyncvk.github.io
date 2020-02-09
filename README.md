@@ -16,7 +16,7 @@ async def main(loop):
   print(a)
 asyncio.get_event_loop().run_until_complete(main(loop))
 ```
-либо можно использовать синхронный вариант вызова
+либо можно использовать ещё один асинхронный вариант вызова
 
 ```python
 vk.async_call()
