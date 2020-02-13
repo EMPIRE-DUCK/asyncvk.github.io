@@ -67,6 +67,11 @@ print((a['execute_errors'][0])
 
 # BotsLongPoll
 ## Кода не будет токо пример
+## Работает пока что только на 1.6
+```bash
+pip3 install vkbee==1.6
+```
+
 ```python
 import time, json, vkbee, asyncio, requests
 
