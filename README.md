@@ -65,6 +65,19 @@ print((a['execute_errors'][0])
 ### Подсказочка
    text и peer_id в примере сразу будут забиты,вам останеться только обработать их и ответить на них!
 
+# Код без ошибки Unclosed Loop
+## Эта ошибка из за aiohttp,решаеться так
+```python
+import vkbee
+import asyncio
+vk = vkbee.VkApi('и снова седой токен',loop=asyncio.get_event_loop())
+async def t():
+	# Paste your code here
+	
+	await vk.s.close() # Paste this in stop
+asyncio.run(t())
+```
+
 # BotsLongPoll
 ## Кода не будет токо пример
 ## Работает пока что только на 1.6
